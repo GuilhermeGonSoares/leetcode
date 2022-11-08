@@ -1,14 +1,14 @@
 class Solution(object):
     def pivotIndex(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        s = sum(nums)
+        left = 0
         for i in range(len(nums)):
-            left_sum = sum(nums[:i])
-            right_sum = sum(nums[i+1:])
-            if left_sum == right_sum:
+            if left == (s - left - nums[i]):
                 return i
+            left += nums [i]
         return -1
+
+
+
 s = Solution()
-print(s.pivotIndex([1,2,3]))
+print(s.pivotIndex([-1,-1,-1,-1,0,1]))

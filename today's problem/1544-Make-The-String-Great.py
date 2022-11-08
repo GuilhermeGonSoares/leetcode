@@ -12,8 +12,6 @@ class Solution(object):
                 else:   
                     i += 1
             else:   
-                i += 1        
-            
+                i += 1         
         return ''.join(letters)
-s = Solution()
-print(s.makeGood("mCcM"))
+
