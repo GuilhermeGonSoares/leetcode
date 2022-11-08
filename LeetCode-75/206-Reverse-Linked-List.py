@@ -4,9 +4,13 @@ class ListNode(object):
         self.val = val
         self.next = next
 class Solution(object):
-    def reverseList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
+    def reverseList(self, head:ListNode):
+        last = None
+        while head:
+            next = head.next
+            head.next = last
+            last = head
+            head = next
+        return last
+
         
